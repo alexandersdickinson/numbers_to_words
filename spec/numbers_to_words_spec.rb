@@ -33,4 +33,8 @@ describe('Fixnum#numbers_to_words') do
   it('handles trillions') do
     expect(967123343907000.numbers_to_words()).to(eq('nine hundred sixty seven trillion one hundred twenty three billion three hundred forty three million nine hundred seven thousand'))
   end
+  
+  it('handles zero') do
+    expect(0.numbers_to_words()).to(eq('zero'))
+  end
 end
