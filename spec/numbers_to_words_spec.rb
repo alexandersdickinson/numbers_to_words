@@ -15,6 +15,6 @@ describe('Fixnum#numbers_to_words') do
   end
   
   it('returns words for numbers 100-999') do
-    expect(373.numbers_to_words().to(eq('three hundred seventy three')))
+    expect(376.numbers_to_words()).to(eq('three hundred seventy six'))
   end
 end

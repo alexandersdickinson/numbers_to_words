@@ -15,7 +15,6 @@ class Fixnum
           num_word.unshift(teens.fetch(numerals[i]))
           is_teen = true
         else
-          num_word.unshift('hundred') if i / 3 > 0
           num_word.unshift(base_num.fetch(numerals[i]))
         end
       elsif i % 3 == 1
@@ -25,6 +24,9 @@ class Fixnum
         else
           num_word.unshift(tens.fetch(numerals[i]))
         end
+      elsif i % 2 == 0
+        num_word.unshift('hundred')
+        num_word.unshift(base_num.fetch(numerals[i]))
       end
     end
     
