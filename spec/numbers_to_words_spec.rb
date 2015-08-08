@@ -25,4 +25,8 @@ describe('Fixnum#numbers_to_words') do
   it('handles millions') do
     expect(86357918.numbers_to_words()).to(eq('eighty six million three hundred fifty seven thousand nine hundred eighteen'))
   end
+  
+  it('handles billions') do
+    expect(9800600200.numbers_to_words()).to(eq('nine billion eight hundred million six hundred thousand two hundred'))
+  end
 end

@@ -14,6 +14,7 @@ class Fixnum
       if i % 3 == 0
         num_word.unshift('thousand') if i / 3 == 1
         num_word.unshift('million') if i / 3 == 2
+        num_word.unshift('billion') if i / 3 == 3
         next if numerals[i] == '0'
         
         if numerals[i + 1] != nil && numerals[i + 1] == '1'
