@@ -17,4 +17,12 @@ describe('Fixnum#numbers_to_words') do
   it('returns words for numbers 100-999') do
     expect(376.numbers_to_words()).to(eq('three hundred seventy six'))
   end
+  
+  it('handles thousands') do
+    expect(206348.numbers_to_words()).to(eq('two hundred six thousand three hundred forty eight'))
+  end
+  
+  it('handles millions') do
+    expect(86357918.numbers_to_words()).to(eq('eighty six million three hundred fifty seven thousand nine hundred eighteen'))
+  end
 end
